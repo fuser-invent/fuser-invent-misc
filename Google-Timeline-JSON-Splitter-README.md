@@ -1,3 +1,10 @@
+PREREQUISITES
+---
+- Python 3.x installed (download from https://www.python.org if you don’t already have it)
+
+
+INSTRUCTIONS
+---
 1. Create a working folder
 2. Save the splitter script to the folder
 3. Copy the Google timeline JSON file into the folder
@@ -12,6 +19,8 @@
 
 
 LOCATION HISTORY FORMAT INFO
-
+---
 Records.json → https://locationhistoryformat.com/reference/records/
 Semantic Location History Data → https://locationhistoryformat.com/guides/semantic-location/
+
+
