@@ -9,3 +9,9 @@
 8. Change the chunk_size if the split files are still too big:
           chunk_size  = 1000               # adjust to how many records per file you want
 9. Run the script
+
+
+LOCATION HISTORY FORMAT INFO
+
+Records.json → https://locationhistoryformat.com/reference/records/
+Semantic Location History Data → https://locationhistoryformat.com/guides/semantic-location/
