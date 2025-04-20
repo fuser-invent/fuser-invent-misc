@@ -1,0 +1,28 @@
+import json
+import os
+
+# Input config
+input_file = 'yourfile.json'  # path to your large JSON file
+output_dir = 'split_output'
+chunk_size = 1000  # number of entries per output file
+key = 'locations'  # key to split on
+
+# Create output dir
+os.makedirs(output_dir, exist_ok=True)
+
+# Load full JSON object
+with open(input_file, 'r') as f:
+    data = json.load(f)
+
+if key not in data or not isinstance(data[key], list):
+    raise ValueError(f"The key '{key}' was not found or is not a list.")
+
+# Split and write
+items = data[key]
+for i in range(0, len(items), chunk_size):
+    chunk = {key: items[i:i+chunk_size]}
+    out_path = os.path.join(output_dir, f'split_{i//chunk_size + 1}.json')
+    with open(out_path, 'w') as out_file:
+        json.dump(chunk, out_file, indent=2)
+
+print(f"Done. Created {len(os.listdir(output_dir))} files in '{output_dir}'.")
