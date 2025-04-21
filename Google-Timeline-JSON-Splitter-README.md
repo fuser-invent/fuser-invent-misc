@@ -12,7 +12,9 @@ INSTRUCTIONS
           input_file = 'yourfile.json'     # e.g. 'Records.json' or '2022_APRIL.json'
 6. Change the key in the script to reflect the type of Google Timeline data you have:
           key         = 'locations'        # or 'timelineObjects' for semantic JSON
-     key → 'locations' (for Records.json) or 'timelineObjects' (for Takeout semantic files)
+     key →   'locations' (for Records.json)
+             'timelineObjects' (for Takeout semantic files)
+             'semanticSegments' (for newest 2025 format change)
 8. Change the chunk_size if the split files are still too big:
           chunk_size  = 1000               # adjust to how many records per file you want
 9. Run the script
