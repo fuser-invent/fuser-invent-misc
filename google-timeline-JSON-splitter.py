@@ -6,7 +6,7 @@ import os
 input_file = 'yourfile.json'     # e.g. 'Records.json' or '2022_APRIL.json'
 output_dir  = 'split_output'
 chunk_size  = 1000               # adjust to how many records per file you want
-key         = 'locations'        # or 'timelineObjects' for semantic JSON
+key         = 'locations'        # or 'timelineObjects' for semantic JSON / or 'semanticSegments' for newest JSON structure
 
 # —— SCRIPT LOGIC ——
 
